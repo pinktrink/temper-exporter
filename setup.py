@@ -14,8 +14,7 @@ if os.path.exists('debian/changelog'):
             break
 else:
     build_no = os.environ.get('BUILD_NUMBER', '0')
-    git_ref = subprocess.check_output(['git', 'rev-parse', '--verify', '--short', 'HEAD']).decode().rstrip()
-    version = '0.dev{}+g{}'.format(build_no, git_ref)
+    version = '0.0.0';
 
 setup(
     name = 'temper-exporter',
